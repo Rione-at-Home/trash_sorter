@@ -20,6 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+             'driver_node = trash_sorter.crane_driver_node:main',
         ],
     },
 )
