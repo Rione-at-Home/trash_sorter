@@ -21,7 +21,7 @@ setup(
     entry_points={
         'console_scripts': [
              'driver_node = trash_sorter.crane_driver_node:main',
-             'gui_node = rtrash_sorter.gui:main',
+             'gui_node = trash_sorter.gui:main',
         ],
     },
 )

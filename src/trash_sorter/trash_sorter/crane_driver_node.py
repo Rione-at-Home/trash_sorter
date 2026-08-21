@@ -16,17 +16,17 @@ ADDR_MOVING_SPEED = 15
 
 PROTOCOL_VERSION = 1.0
 
-PORT_NAME = "/dev/ttyUSB1"
+PORT_NAME = "/dev/ttyUSB0" # FIXME - arm experiment
 BAUDRATE = 1000000
 
 ADDR_GOAL_POSITION = 30
 
 JOINT_TO_ID = {
     "crane_plus_joint1": 1,
-    "crane_plus_joint2": 2,
-    "crane_plus_joint3": 3,
-    "crane_plus_joint4": 4,
-    "crane_plus_joint_hand": 5,
+    "crane_plus_joint2": 6,
+    "crane_plus_joint3": 2,
+    "crane_plus_joint4": 5,
+    "crane_plus_joint_hand": 7,
 }
 
 
