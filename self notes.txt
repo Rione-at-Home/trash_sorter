@@ -1,0 +1,13 @@
+Reference
+-Work ONLY in the src trash_sorter
+
+What do
+-Create parts, assemble
+-Extend arm, robot(?) python files to include motorized bin
+-Work on poses and challenge nodes (see separate branches)
+    -Can work on shuttle strat whileworking on motorized bin
+
+Optional
+-Maybe turn the start commands into bash scripts
+-Use different branches
+-probably add this to the github for reference
