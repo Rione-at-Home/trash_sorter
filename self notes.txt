@@ -5,9 +5,11 @@ What do
 -Create parts, assemble
 -Extend arm, robot(?) python files to include motorized bin
 -Work on poses and challenge nodes (see separate branches)
-    -Can work on shuttle strat whileworking on motorized bin
+    -Can work on shuttle strat while working on motorized bin
 
 Optional
--Maybe turn the start commands into bash scripts
 -Use different branches
--probably add this to the github for reference
+
+About bash scripts
+-They're dasy-chained scripts that should allow you to easy open the GUI by running the first script (testbash1.sh)
+within a new terminal.
