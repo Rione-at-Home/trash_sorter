@@ -1,4 +1,4 @@
 #!/bin/bash
 colcon build
 . install/setup.bash
-gnome-terminal -- "./testbash2.sh"
+gnome-terminal -- "./gui_cam_run.sh"
