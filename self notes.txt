@@ -13,3 +13,5 @@ Optional
 About bash scripts
 -They're dasy-chained scripts that should allow you to easy open the GUI by running the first script (testbash1.sh)
 within a new terminal.
+
+Full stand values: 0, 90, 0, 0, 0, 0
