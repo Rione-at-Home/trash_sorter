@@ -116,7 +116,6 @@ class CraneGUI(QWidget):
             "crane_plus_joint2",
             "crane_plus_joint3",
             "crane_plus_joint4",
-            "crane_plus_joint5",
             "crane_plus_joint_hand",
         ]
 

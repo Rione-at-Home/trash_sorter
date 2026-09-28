@@ -26,8 +26,7 @@ JOINT_TO_ID = {
     "crane_plus_joint1": 1,
     "crane_plus_joint2": 6,
     "crane_plus_joint3": 2,
-    "crane_plus_joint4": 5,
-    "crane_plus_joint5": 7,
+    "crane_plus_joint4": 7,
     "crane_plus_joint_hand": 3
 }
 
