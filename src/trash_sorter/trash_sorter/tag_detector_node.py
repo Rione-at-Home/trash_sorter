@@ -53,9 +53,9 @@ class TagDetectorNode(Node):
 
         self.bridge = CvBridge()
 
-        # --- ArUco setup ---
-        self.dictionary = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_4X4_50)
-        self.parameters = cv2.aruco.DetectorParameters()
+        # --- ArUco setup (pre-4.7 OpenCV API) ---
+        self.dictionary = cv2.aruco.Dictionary_get(cv2.aruco.DICT_4X4_50)
+        self.parameters = cv2.aruco.DetectorParameters_create()
 
         # Tuned for small/low-res markers. If detection feels unreliable
         # on your camera/resolution, these are the first knobs to check -
@@ -65,8 +65,6 @@ class TagDetectorNode(Node):
         self.parameters.adaptiveThreshWinSizeStep = 10
         self.parameters.minMarkerPerimeterRate = 0.02
         self.parameters.polygonalApproxAccuracyRate = 0.05
-
-        self.detector = cv2.aruco.ArucoDetector(self.dictionary, self.parameters)
 
         # --- Camera intrinsics ---
         # Deliberately NOT hardcoded to a specific resolution. These are
@@ -108,7 +106,9 @@ class TagDetectorNode(Node):
             self._init_camera_matrix(frame.shape)
 
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        corners, ids, _ = self.detector.detectMarkers(gray)
+        corners, ids, _ = cv2.aruco.detectMarkers(
+            gray, self.dictionary, parameters=self.parameters
+        )
 
         if ids is not None and len(ids) > 0:
             cv2.aruco.drawDetectedMarkers(frame, corners, ids)
