@@ -16,14 +16,19 @@ To add new motors, follow these steps:
 These files are daisy-chained bash files used to create a build and activate all nodes and access the GUI. To use, navigate to the trash_sorter-main director, then type:
 ./gui_run.sh
 These should automatically all nodes, going from:
+
 gui_run.sh
 - Colcon builds, then runs below file
+
 gui_cam_run.sh
 - Enables the v4l2 camera drivers, then runs below file
+
 gui_arm_run.sh
 - Enables the arm node/driver node, crane_driver_node.py, then runs below file
+
 gui_detec_run.sh
 - Enables the camera node, tag_detector_node.py, then runs the below file
+
 gui_gui_run.sh
 - Runs the gui node, allowing debug access
 

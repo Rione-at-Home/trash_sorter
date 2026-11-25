@@ -1,6 +1,6 @@
 Fundamental issues
-- [ ] Fix authorization issues with uploading to GitHub.
-- [ ] Fix v4l2 camera driver not running.
+- [x] Fix authorization issues with uploading to GitHub.
+- [x] Fix v4l2 camera driver not running.
 
 Development Goals
 - [ ] Ensure turtle base moves when given gui commands.
@@ -10,7 +10,11 @@ Development Goals
 - [ ] Create challenge_node.py containing the state machine for item pickup.
 - The challenge node should use either the shuttle or batch strategies; Whichever is more doable (see the issues page of the GitHub repo).
 - Personally, since we already have the basket, I think we should go for the batch strategy - James
+- [ ] Determine and implement interactive features (concurrent with above)
+- [ ] Connect via Raspberry Pi
 
 Stretch Goals
 - [ ] New, more formal end effector
 - [ ] New, more formal sorting bin
+- [ ] New bash files for auto-startup
+- [ ] Name for the robot
