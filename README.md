@@ -11,6 +11,18 @@ To add new motors, follow these steps:
 3. In gui.py, add the arbitrary name to the self.joint_names list.
 4. In poses.py, ensure that the motor is accounter for in each of the lists within. Each list item determines the rotation of the motor according to index and thus the arm's poses (e.g., HOME[0] determines the rotation of crane_plus_joint1, which is 0).
 
+# Starting and running
+1. Use the below command to colcon build:
+
+colcon build --packages-select trash_sorter
+
+
+2. Run source install/setup.bash
+
+3. Use the below command
+
+ros2 launch kobuki_node kobuki_node-launch.py device:=/dev/kobuki
+
 
 # .sh files
 These files are daisy-chained bash files used to create a build and activate all nodes and access the GUI. To use, navigate to the trash_sorter-main director, then type:
