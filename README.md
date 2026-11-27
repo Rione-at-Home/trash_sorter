@@ -23,6 +23,8 @@ colcon build --packages-select trash_sorter
 
 ros2 launch kobuki_node kobuki_node-launch.py device:=/dev/kobuki
 
+make sure to run the joy node using ros2 run joy joy_node
+
 
 # .sh files
 These files are daisy-chained bash files used to create a build and activate all nodes and access the GUI. To use, navigate to the trash_sorter-main director, then type:

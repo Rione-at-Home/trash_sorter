@@ -22,7 +22,9 @@ setup(
         'console_scripts': [
              'driver_node = trash_sorter.crane_driver_node:main',
              'gui_node = trash_sorter.gui:main',
-             'camera_node = trash_sorter.tag_detector_node:main'
+             'camera_node = trash_sorter.tag_detector_node:main',
+            'controller_node = trash_sorter.testpublisher:main',
+            'listener_node  = trash_sorter.challenge_node:main'
         ],
     },
 )
