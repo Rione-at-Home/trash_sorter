@@ -3,9 +3,7 @@
 #
 ## challenge_node.py
 #
-#  This program defines the main node for the challenge. It initializes the 
-#  robot and provides a template for implementing the challenge solution.
-#
+#  Based off of turtle-and-crane from the 2026 summer introduciton project; Repurposed as the "main" control node for the bot.
 #
 
 import rclpy

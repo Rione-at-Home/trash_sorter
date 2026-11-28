@@ -11,19 +11,24 @@ To add new motors, follow these steps:
 3. In gui.py, add the arbitrary name to the self.joint_names list.
 4. In poses.py, ensure that the motor is accounter for in each of the lists within. Each list item determines the rotation of the motor according to index and thus the arm's poses (e.g., HOME[0] determines the rotation of crane_plus_joint1, which is 0).
 
-# Starting and running
+# Startup sequence (So far)
 1. Use the below command to colcon build:
 
 colcon build --packages-select trash_sorter
 
+2. For every node, make sure you open a new terminal and run `source install/setup.bash`, then the associated node command (see below steps).
 
-2. Run source install/setup.bash
+3. Run the joy drivers (essential for DualShock control) using the below command:
 
-3. Use the below command
+ros2 run joy joy_node
+
+4. Run the kobuki drivers using the below:
 
 ros2 launch kobuki_node kobuki_node-launch.py device:=/dev/kobuki
 
-make sure to run the joy node using ros2 run joy joy_node
+5. tbd but for dualshock control make sure you run the nodes controller_node and listener_node using ros2 run trash_sorter [node]
+- Controller node (testpublisher.py)
+- Listener node (challenge_node.py; Main node for running the machine)
 
 
 # .sh files

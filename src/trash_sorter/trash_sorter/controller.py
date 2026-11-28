@@ -1,3 +1,5 @@
+# Node responsible for listening to the DualShock controller and publishing its button states under the cmd_vel topic
+
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Joy
@@ -15,6 +17,8 @@ class PS4JoyBridge(Node):
             10
         )
         self.publisher = self.create_publisher(Joy, 'cmd_vel', 10)
+
+        self.get_logger().info("Control Link: Online.")
 
     def joy_callback(self, msg: Joy):
         self.publisher.publish(msg)
